@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #0D0D12;
+    color: #F5F5F7;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior: none;
+  }
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #2E2E3A; border-radius: 99px; }
+  ::-webkit-scrollbar-thumb:hover { background: #3A3A48; }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(20, 20, 27, 0.72);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .glass-light {
+    background: rgba(28, 28, 38, 0.55);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  .gold-gradient {
+    background: linear-gradient(135deg, #E0C450 0%, #D4AF37 50%, #B8932B 100%);
+  }
+  .gold-text {
+    background: linear-gradient(135deg, #F5EBC0 0%, #D4AF37 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .gold-glow {
+    box-shadow: 0 0 24px -4px rgba(212,175,55,0.45);
+  }
+  .gold-glow-strong {
+    box-shadow: 0 0 40px -8px rgba(212,175,55,0.6);
+  }
+  .shimmer-bg {
+    background: linear-gradient(90deg, #1C1C26 0%, #24242F 50%, #1C1C26 100%);
+    background-size: 1000px 100%;
+    animation: shimmer 2.5s linear infinite;
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
